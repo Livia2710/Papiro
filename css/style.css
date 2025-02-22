@@ -22,6 +22,24 @@ header{
     text-decoration: none;
 }
 
+/* Estilização para os container */
+.container_sobre, .container_beneficios, .container_video {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .container_logo{
     display: flex;
     flex-direction: row;
@@ -46,13 +64,28 @@ header{
     margin-left: -33px;
 }
 
-.circulo{
+.circulo {
     background-color: #d4a373;
     height: 100px;
     width: 125px;
     border-radius: 100%;
     margin-left: 50px;
+    opacity: 0;  /* Começa invisível */
+    transform: scale(0.5);  /* Começa reduzido */
+    animation: circuloAnimacao 1s forwards;  /* Animação de entrada */
 }
+
+@keyframes circuloAnimacao {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);  /* Retorna ao tamanho original */
+    }
+}
+
 /* Estilização da lista com os links */
 ul {
     display: flex;
@@ -86,6 +119,7 @@ a:hover {
     height: 400px;
     overflow: hidden; /*Esconde partes fora da parte visível*/
     margin: auto; /*Centralizar o banner*/
+    background-attachment: fixed
 }
 
 /* Container para os slides */
@@ -198,7 +232,7 @@ a:hover {
 
 /* Animação de quando passar o mouse em cima */
 .titulo_mapa:hover{
-    transform: translateY(-30px);
+    transform: translateY(-10px);
     transition: 1s all; 
     cursor: pointer;
 }
@@ -263,6 +297,27 @@ a:hover {
     cursor: pointer;
 }
 
+.item_escondido:hover::after {
+    content: '🍂';  /* Pode substituir por imagens de folhas ou emojis */
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    animation: folhasRastro 1s infinite;  /* Animação do rastro de folhas */
+}
+
+@keyframes folhasRastro {
+    0% {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(50px) translateY(20px) scale(1.5); /* Folha flutuando para fora */
+    }
+}
+
+
 label:hover{
     box-shadow: 0px 6px 15px rgba(17, 15, 15, 0.5); /* Brilho */
     transition: 1s all;
@@ -319,6 +374,7 @@ iframe:hover {
     transform: scale(1.05); /* Aumenta ligeiramente */
     box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5); /* Brilho */
     transition: 1s all;
+    
 }
 
 .title{
@@ -351,6 +407,19 @@ iframe:hover {
 footer{
     background-color: #8b4513;
 }
+
+/* Estilo do footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8b4513;
+    color: #f5f5dc;
+    height: 200px;
+    position: relative; /* Para facilitar a posição do rastro */
+}
+
 
 /* ____________________________________________________________ */
 /* Estilização do Scroll */
