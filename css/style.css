@@ -172,6 +172,13 @@ a:hover {
     color: #8b4513;
     border: none;
 }
+
+.btn_sobre:hover{
+    color: #f5f5dc;
+    background-color: #00897b;
+    transition: 1s all;
+    cursor: pointer;
+}
 /* ____________________________________________________________ */
 /* Mapa */
 .container_mapa{
@@ -189,6 +196,12 @@ a:hover {
     font-weight: 400;
 }
 
+/* Animação de quando passar o mouse em cima */
+.titulo_mapa:hover{
+    transform: translateY(-30px);
+    transition: 1s all; 
+    cursor: pointer;
+}
 /* ____________________________________________________________ */
 /* Beneficios */
 
@@ -250,6 +263,11 @@ a:hover {
     cursor: pointer;
 }
 
+label:hover{
+    box-shadow: 0px 6px 15px rgba(17, 15, 15, 0.5); /* Brilho */
+    transition: 1s all;
+}
+
 /* Oculta os checkboxes para não aparecerem na tela */
 input[type="checkbox"] {
     display: none;
@@ -265,6 +283,11 @@ input[type="checkbox"] {
     padding: 8px;
     margin-top: -17px; /* Adiciona espaço entre o título e o conteúdo */
     border-bottom-right-radius: 10px;
+}
+
+.conteudo{
+    box-shadow: 0px 11px 10px rgba(17, 15, 15, 0.5); /* Brilho */
+    transition: 1s all;
 }
 
 /* Mostra o texto escondido quando o checkbox está marcado */
@@ -303,6 +326,13 @@ iframe:hover {
     font-size: 32px;
     font-weight: 400;
     color: #f5f5dc;
+}
+
+.title:hover{  
+    transform: translateY(-30px);
+    transition: 1s all; 
+    cursor: pointer;
+    
 }
 
 /* ____________________________________________________________ */
