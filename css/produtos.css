@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora";
+    background-color: #f5f5dc;
+}
+
+/* Estilização do Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    background-color: #8b4513;
+    color: #f5f5dc;
+    height: 120px;
+    text-decoration: none;
+}
+
+/* Estilização para os container */
+.container_sobre, .container_beneficios, .container_video {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.texto_header{
+    margin-left: 15px;
+    font-family: "Merriweather";
+    font-weight: 400;
+}
+
+/* Animação de quando passar o mouse em cima */
+.texto_header:hover{
+    color: #d4a373;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.logotipo{
+    margin-top: -50px;
+    margin-left: -33px;
+}
+
+.circulo {
+    background-color: #d4a373;
+    height: 100px;
+    width: 125px;
+    border-radius: 100%;
+    margin-left: 50px;
+    opacity: 0;  /* Começa invisível */
+    transform: scale(0.5);  /* Começa reduzido */
+    animation: circuloAnimacao 1s forwards;  /* Animação de entrada */
+}
+
+@keyframes circuloAnimacao {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);  /* Retorna ao tamanho original */
+    }
+}
+
+/* Estilização da lista com os links */
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    margin-right: 50px;
+    text-decoration: none;
+    
+}
+/* os Item(links) */
+li, a{
+    font-family: "Lora";
+    color: #f5f5dc;
+    text-decoration: none; /*Tira a linha do link*/
+    font-size: 19px;
+    list-style: none; /* Para titar os pontinho*/
+}
+
+/* "Animação" para mudar a cor enquanto passa o mouse */
+a:hover {
+    color: #d4a373;
+    transition: 1s;
+    cursor: pointer;
+}
+
+/* ____________________________________________________________ */
+/* Main */
+
+h1 {
+    margin-left: 50px;
+    font-family: "Merriweather";
+    font-weight: 400;
+}
+
+/* Container dos Cards */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    
+}
+
+/* Estilização dos Cards */
+.card {
+    background-color: #ffffff;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;   
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h2{
+    margin: 10px 0;
+}
+
+.preco{
+    font-size: 18px;
+    font-weight: bold;
+    color: #8b4513;
+}
+.capa {
+    width: 150px;
+    margin-top: 25px;
+}
+
+/* ____________________________________________________________ */
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8b4513;
+    color: #f5f5dc;
+    height: 200px;
+}
+
+footer{
+    background-color: #8b4513;
+}
+
+/* Estilo do footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8b4513;
+    color: #f5f5dc;
+    height: 200px;
+    position: relative; /* Para facilitar a posição do rastro */
+}
+
+
+/* ____________________________________________________________ */
+/* Estilização do Scroll */
+html ::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  html ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #8b4513;
+}
+  
+  html ::-webkit-scrollbar-track {
+    background: #d4a373;
+}
