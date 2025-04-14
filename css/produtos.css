@@ -6,7 +6,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Lora";
-    background-color: #f5f5dc;
+    background-color: #d4a373;
 }
 
 /* Estilização do Header */
@@ -66,7 +66,7 @@ header{
 
 .circulo {
     background-color: #d4a373;
-    height: 100px;
+    height: 90px;
     width: 125px;
     border-radius: 100%;
     margin-left: 50px;
@@ -132,12 +132,17 @@ h1 {
 
 /* Estilização dos Cards */
 .card {
-    background-color: #ffffff;
+    background-color: #f5f5dc;
     width: 280px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;   
     transition: transform 0.3s ease-in-out;
+}
+
+.card p{
+    text-align: center;
+    margin: 15px 15px;
 }
 
 .card:hover{

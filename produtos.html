@@ -6,6 +6,14 @@
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/produtos.css">
     <title>Produtos</title>
+    <script>
+      alert("Venha se aventurar em novos mundo!")
+
+      data=new Date
+      dia=new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
+      mes=new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+      
+    </script>
 </head>
 <body>
     <!-- Conteudo -->
@@ -26,6 +34,12 @@
 
        <main>
         <h1> 📔Nossos Produtos</h1>
+        <p style="text-align: right; margin-right: 10px;">
+          <script>
+            document.write(data);
+            document.write(dia[data.getDay()] + ", " + data.getDate + " de "+ mes[data.getMonth()] + " de " + date.getFullYear());
+          </script>
+        </p>
 
         <div class="container">
 
@@ -67,7 +81,7 @@
 
           <div class="card">
             <img class="capa" src="/img/Capa_Coraline.jpg" alt="">
-            <h2>Frankenstein</h2>
+            <h2>Coraline</h2>
             <p>Coraline acaba de se mudar para uma velha mansão envolta em neblina. Enquanto os pais trabalham, a menina se diverte explorando o local.</p>
             <span class="preco">R$ 423,87</span>
           </div>
