@@ -9,13 +9,18 @@
     <script>
       alert("Venha se aventurar em novos mundo!")
 
-      data=new Date
       dia=new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
       mes=new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
-      
+      data=new Date
+
+      // Função para abrir o Pop-Up de descrição do produto
+      function abrirDetalhes(nome, imagem, descricao){
+        const url = `pop_up._produtos.html?nomeProd=${encodeURIComponent(nome)}&imagemProd${encodeURIComponent(imagem)}&descricaoProd${encodeURIComponent(descricao)}`
+        window.open(url, "blank", "width=800, height=700")
+      }
     </script>
 </head>
-<body>
+<body onload="abrirDetalhes()">
     <!-- Conteudo -->
     <header>
         <div class="container_logo">
@@ -35,15 +40,14 @@
        <main>
         <h1> 📔Nossos Produtos</h1>
         <p style="text-align: right; margin-right: 10px;">
-          <script>
-            document.write(data);
-            document.write(dia[data.getDay()] + ", " + data.getDate + " de "+ mes[data.getMonth()] + " de " + date.getFullYear());
+          <script type="text/javascript">
+            document.write(dia[data.getDay()] + ", " + data.getDate() + " de "+ mes[data.getMonth()] + " de " + data.getFullYear());
           </script>
         </p>
 
         <div class="container">
 
-          <div class="card">
+          <div class="card" onclick="abrirDetalhes('Inferno da Dante', '/img/Capa_InfernoDante.jpg', 'O Inferno é a primeira parte da ', 'Divina Comédia de Dante Alighieri, sendo as outras duas o Purgatório e o Paraíso. Está dividido em trinta e três cantos, possuindo um canto a mais que as outras duas partes, que serve de introdução ao poema.')">
             <img class="capa" src="/img/Capa_InfernoDante.jpg" alt="">
             <h2>Inferno de Dante</h2>
             <p>Dante, perdido numa selva escura, erra nela toda a noite. </p>
