@@ -135,7 +135,6 @@ h1 {
     background-color: #f5f5dc;
     width: 280px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;   
     transition: transform 0.3s ease-in-out;
 }

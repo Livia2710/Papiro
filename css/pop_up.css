@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+img{
+    width: 290px;
+    height: 380px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+
+h1{
+    color: #8b4513;
+    margin-left: 50px;
+    font-family: "Merriweather";
+    font-weight: 700;
+    margin-right: 50px;
+}
+
+p {
+    font-family: "Lora";
+    color: #8b4513;
+    padding: 15px;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slider button{
+    background-color: #8b4513;
+    border: none;
+    color: #f5f5dc;
+    cursor: pointer;
+    padding: 8px;
+}
