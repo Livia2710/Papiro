@@ -1,65 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lora";
+    font-family: "Lora", serif;
     background-color: #d4a373;
 }
 
-/* Estilização do Header */
-header{
+/* Header Styling */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    flex-direction: row;
     background-color: #8b4513;
     color: #f5f5dc;
     height: 120px;
-    text-decoration: none;
+    padding: 0 20px;
 }
 
-/* Estilização para os container */
-.container_sobre, .container_beneficios, .container_video {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUp 1s forwards;
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.container_logo{
+.container_logo {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
-.texto_header{
+.texto_header {
     margin-left: 15px;
-    font-family: "Merriweather";
+    font-family: "Merriweather", serif;
     font-weight: 400;
 }
 
-/* Animação de quando passar o mouse em cima */
-.texto_header:hover{
+.texto_header:hover {
     color: #d4a373;
-    transition: 1s;
+    transition: color 0.5s;
     cursor: pointer;
 }
 
-.logotipo{
+.logotipo {
     margin-top: -50px;
     margin-left: -33px;
 }
@@ -70,9 +48,9 @@ header{
     width: 125px;
     border-radius: 100%;
     margin-left: 50px;
-    opacity: 0;  /* Começa invisível */
-    transform: scale(0.5);  /* Começa reduzido */
-    animation: circuloAnimacao 1s forwards;  /* Animação de entrada */
+    opacity: 0;
+    transform: scale(0.5);
+    animation: circuloAnimacao 1s forwards;
 }
 
 @keyframes circuloAnimacao {
@@ -82,127 +60,168 @@ header{
     }
     100% {
         opacity: 1;
-        transform: scale(1);  /* Retorna ao tamanho original */
+        transform: scale(1);
     }
 }
 
-/* Estilização da lista com os links */
 ul {
     display: flex;
-    flex-direction: row;
     gap: 45px;
     margin-right: 50px;
-    text-decoration: none;
-    
-}
-/* os Item(links) */
-li, a{
-    font-family: "Lora";
-    color: #f5f5dc;
-    text-decoration: none; /*Tira a linha do link*/
-    font-size: 19px;
-    list-style: none; /* Para titar os pontinho*/
 }
 
-/* "Animação" para mudar a cor enquanto passa o mouse */
+li, a {
+    font-family: "Lora", serif;
+    color: #f5f5dc;
+    text-decoration: none;
+    font-size: 19px;
+    list-style: none;
+}
+
 a:hover {
     color: #d4a373;
-    transition: 1s;
+    transition: color 0.5s;
     cursor: pointer;
 }
 
-/* ____________________________________________________________ */
-/* Main */
-
+/* Main Styling */
 h1 {
-    margin-left: 50px;
-    font-family: "Merriweather";
-    font-weight: 400;
-}
-
-/* Container dos Cards */
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 20px;
-    
-}
-
-/* Estilização dos Cards */
-.card {
-    background-color: #f5f5dc;
-    width: 280px;
-    border-radius: 10px;
-    text-align: center;   
-    transition: transform 0.3s ease-in-out;
-}
-
-.card p{
-    text-align: center;
-    margin: 15px 15px;
-}
-
-.card:hover{
-    transform: scale(1.05);
-}
-
-.card h2{
-    margin: 10px 0;
-}
-
-.preco{
-    font-size: 18px;
-    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 145px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
     color: #8b4513;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+    background-color: #f5f5dc;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 0.5s forwards;
+    animation-delay: calc(0.1s * var(--card-index));
+}
+
+.card:nth-child(1) { --card-index: 1; }
+.card:nth-child(2) { --card-index: 2; }
+.card:nth-child(3) { --card-index: 3; }
+.card:nth-child(4) { --card-index: 4; }
+.card:nth-child(5) { --card-index: 5; }
+.card:nth-child(6) { --card-index: 6; }
+.card:nth-child(7) { --card-index: 7; }
+.card:nth-child(8) { --card-index: 8; }
+.card:nth-child(9) { --card-index: 9; }
+.card:nth-child(10) { --card-index: 10; }
+.card:nth-child(11) { --card-index: 11; }
+.card:nth-child(12) { --card-index: 12; }
+.card:nth-child(13) { --card-index: 13; }
+.card:nth-child(14) { --card-index: 14; }
+.card:nth-child(15) { --card-index: 15; }
+.card:nth-child(16) { --card-index: 16; }
+.card:nth-child(17) { --card-index: 17; }
+.card:nth-child(18) { --card-index: 18; }
+
+@keyframes fadeInCard {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.10);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card p {
+    margin: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #8b4513;
+}
+
+.preco {
+    font-size: 18px;
+   font-weight: bold;
+    color: #8b4513;
+    margin-bottom: 10px;
+    display: block;
+}
+
 .capa {
     width: 150px;
-    margin-top: 25px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
-/* ____________________________________________________________ */
-/* Footer */
-
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #8b4513;
-    color: #f5f5dc;
-    height: 200px;
-}
-
-footer{
-    background-color: #8b4513;
-}
-
-/* Estilo do footer */
+/* Footer Styling */
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #8b4513;
     color: #f5f5dc;
     height: 200px;
-    position: relative; /* Para facilitar a posição do rastro */
 }
 
+footer {
+    background-color: #8b4513;
+}
 
-/* ____________________________________________________________ */
-/* Estilização do Scroll */
-html ::-webkit-scrollbar {
+/* Scrollbar Styling */
+html::-webkit-scrollbar {
     width: 10px;
 }
-  
-  html ::-webkit-scrollbar-thumb {
+
+html::-webkit-scrollbar-thumb {
     border-radius: 50px;
     background: #8b4513;
 }
-  
-  html ::-webkit-scrollbar-track {
+
+html::-webkit-scrollbar-track {
     background: #d4a373;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }

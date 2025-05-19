@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/produtos.css">
+    <link rel="shortcut icon" href="img/logo_favicon.png" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Produtos</title>
     <script>
       alert("Venha se aventurar em novos mundo!")
@@ -25,7 +27,7 @@
     <header>
         <div class="container_logo">
           <div class="circulo">
-            <img class="logotipo" src="./img/logo.png" alt="Logo" width="200px" >
+            <a href="index.html"><img class="logotipo" src="./img/logo.png" alt="Logo" width="200px" ></a>
           </div>
           <h1 class="texto_header">Papiro</h1>
         </div>
@@ -38,8 +40,8 @@
        <!-- _________________________________________________________ -->
 
        <main>
-        <h1> 📔Nossos Produtos</h1>
-        <p style="text-align: right; margin-right: 10px;">
+        <h1>Nossos Produtos</h1>
+        <p style="text-align: right; margin-right: 150px;">
           <script type="text/javascript">
             document.write(dia[data.getDay()] + ", " + data.getDate() + " de "+ mes[data.getMonth()] + " de " + data.getFullYear());
           </script>
@@ -54,7 +56,21 @@
             slider2=['/img/Caoa_CorcudaNotreDame.jpg', '/img/corcunda_2.jpg','/img/corcunda_3.jpg']
             slider3=['/img/Capa_Frankenstein.jpg', '/img/frankenstein_2.webp','/img/frankenstein_3.jpg']
             slider4=['/img/Capa_Coraline.jpg', '/img/coraline_2.jpg','/img/coraline_3.jpg']
+            slider5=['/img/PequenoPrincipe_2.webp','/img/Capa_PequenoPrincipe.jpg','/img/PequenoPrincipe_3.jpg'] 
+            slider6=['/img/DomQuixote_2.jpg','/img/Capa_DomQuixote.webp','/img/DomQuixote_3.jpg']
+            slider7=['/img/Capa_100Solidao.jpg','/img/100Solidao_2.jpg','/img/100Solidao_3.jpg']
+            slider8=['/img/Capa_Alquimista.jpg','/img/Alquimista_2.webp','/img/Alquimista_3.jpg']
+            slider9=['/img/Capa_Casmurro.jpg','/img/Casmurro_2.webp','/img/Casmurro_3.jpg']
+            slider10=['/img/Capa_CrimeCastigo.webp','/img/CrimeCastigo_2.jpg','/img/CrimeCastigo_3.jpg']
+            slider11=['/img/Capa_OrgulhoPreconceito.webp','/img/OrgulhoPreconceito_2.jpg','/img/OrgulhoPreconceito_3.jpg']
+            slider12=['/img/Capa_Bichos.jpg','/img/Bichos_2.webp','/img/Bichos_3.jpg']
+            slider13=['/img/Cegueira_2.jpg', '/img/Capa_Cegueira.jpg','/img/Cegueira_3.jpg']
+            slider14=['/img/Capa_Hamlet.jpg','/img/hamlet_2.webp','/img/hamlet_3.jpg']
+            slider15=['/img/Capa_RomeuJulieta.jpg','/img/RomeuJulieta_2.jpg','/img/RomeuJulieta_3.jpg']
+            slider16=['/img/Capa_Biblioteca.jpg','/img/Biblioteca_2.jpg','/img/Biblioteca_3.jpg']
           </script>
+
+          <!-- ___________________________Primeira linha_______________________________  --> 
 
           <div class="card" onclick="abrirDetalhes('Inferno da Dante', slider, desc_produto)">
             <img class="capa" src="/img/Capa_InfernoDante.jpg" alt="">
@@ -68,12 +84,6 @@
             <h2>It - A Coisa</h2>
             <p> Uma história de se arrepiar</p>
             <span class="preco">R$ 84,58</span>
-          </div>
-          <div class="card" onclick="abrirDetalhes('O Diário de Jack Estripador', slider2, 'O livro explora a origem do texto, a análise científica a que foi submetido e informações sobre os crimes de Jack, o Estripador, em Londres em 1888. Inclui também mapas, fotos e o diário completo para o leitor julgar as palavras do assassino')">
-            <img class="capa" src="/img/Capa_JackEstripador.jpg" alt="">
-            <h2>O Diário de Jack Estripador</h2>
-            <p>Descubra no diário de um dos mais cruéis psicopatas da História. </p>
-            <span class="preco">R$ 48,29</span>
           </div>
 
           <div class="card" onclick="abrirDetalhes('O Corcunda de Notre Dame', slider2, 'Na Paris do século XV, a cigana Esmeralda dança em frente à catedral de Notre Dame. Ao redor da jovem e da igreja, dançam outros personagens inesquecíveis - como o cruel arquidiácono Claude Frollo, o capitão Phoebus, a velha reclusa Gudule e, claro, o disforme Quasímodo, o corcunda que cuida dos sinos da catedral.')">
@@ -98,7 +108,94 @@
             <span class="preco">R$ 423,87</span>
           </div>
 
+           <!-- ___________________________Segunda linha_______________________________  -->
 
+          <div class="card" onclick="abrirDetalhes('O Pequeno Principe', slider5, 'Um piloto cai com seu avião no deserto e ali encontra uma criança loura e frágil. Ela diz ter vindo de um pequeno planeta distante. E ali, na convivência com o piloto perdido, os dois repensam os seus valores e encontram o sentido da vida.')">
+            <img class="capa" src="/img/PequenoPrincipe_2.webp" alt="">
+            <h2>O Pequeno Principe</h2>
+            <p>Uma fábula poética sobre os valores da vida. </p>
+            <span class="preco">R$ 33,45</span>
+          </div>
+
+           <div class="card" onclick="abrirDetalhes('Dom Quixote', slider6, 'Um fidalgo enlouquecido pelas leituras de romances de cavalaria decide tornar-se cavaleiro andante, vivendo aventuras cômicas e trágicas ao lado de seu fiel escudeiro Sancho Pança.')">
+            <img class="capa" src="/img/DomQuixote_2.jpg" alt="">
+            <h2>Dom Quixote</h2>
+            <p>Uma sátira brilhante sobre a luta entre idealismo e realidade.</p>
+            <span class="preco">R$ 78,19 </span>
+          </div>
+
+          <div class="card" onclick="abrirDetalhes('Cem Anos de Solidão', slider7, 'A saga da família Buendía na fictícia Macondo, explorando temas como solidão, amor e destino ao longo de gerações.')">
+            <img class="capa" src="/img/Capa_100Solidao.jpg" alt="">
+            <h2>Cem Anos de Solidão</h2>
+            <p> Uma epopeia mágica que retrata a história e os mitos da América Latina.</p>
+            <span class="preco">R$ 32,13</span>
+          </div>
+          <div class="card" onclick="abrirDetalhes('O Alquimista ', slider8, 'Santiago, um jovem pastor andaluz, parte em busca de um tesouro nas pirâmides do Egito, descobrindo o verdadeiro significado de sua lenda pessoal.')">
+            <img class="capa" src="/img/Capa_Alquimista.jpg" alt="">
+            <h2>O Alquimista </h2>
+            <p>Uma jornada espiritual sobre seguir os sonhos e ouvir o coração.</p>
+            <span class="preco">R$ 13,29</span>
+          </div>
+
+          <div class="card" onclick="abrirDetalhes('Dom Casmurro ', slider9, 'Bentinho narra sua vida e o suposto adultério de sua esposa Capitu, deixando o leitor em dúvida sobre a veracidade de sua história.')">
+            <img class="capa" src="/img/Capa_Casmurro.jpg" alt="">
+            <h2>Dom Casmurro </h2>
+            <p>Um retrato ambíguo e irônico do ciúme e da memória.
+            </p>
+            <span class="preco">R$ 12,30</span>
+          </div>
+
+          <!-- ___________________________Terceira linha_______________________________  -->
+
+          <div class="card" onclick="abrirDetalhes('Crime e Castigo', slider10, 'Raskólnikov, um estudante pobre, comete um assassinato e enfrenta as consequências psicológicas e morais de seu ato.')">
+            <img class="capa" src="/img/Capa_CrimeCastigo.webp" alt="">
+            <h2>Crime e Castigo</h2>
+            <p>Um mergulho profundo na mente de um homem dividido entre o bem e o mal.</p>
+            <span class="preco">R$ 12,30</span>
+          </div>
+
+          <div class="card" onclick="abrirDetalhes('Orgulho e Preconceito ', slider11, ' Elizabeth Bennet enfrenta as expectativas sociais e seus próprios preconceitos ao se envolver com o enigmático Sr. Darcy.')">
+            <img class="capa" src="/img/Capa_OrgulhoPreconceito.webp" alt="">
+            <h2>Orgulho e Preconceito </h2>
+            <p> Um romance afiado sobre amor, classe e auto-descoberta.</p>
+            <span class="preco">R$ 12,30 </span>
+          </div>
+
+           <div class="card" onclick="abrirDetalhes('A Revolução dos Bichos ', slider12, 'Animais de uma fazenda se rebelam contra seus donos humanos, criando uma sociedade que rapidamente se corrompe.')">
+            <img class="capa" src="/img/Capa_Bichos.jpg" alt="">
+            <h2>A Revolução dos Bichos </h2>
+            <p>Uma fábula poderosa sobre o poder e sua tendência à corrupção.</p>
+            <span class="preco">R$ 13,78</span>
+          </div>
+
+          <div class="card" onclick="abrirDetalhes('Ensaio sobre a Cegueira', slider13, 'Uma epidemia de cegueira atinge uma cidade, revelando o caos e a fragilidade da sociedade.')">
+            <img class="capa" src="/img/Cegueira_2.jpg" alt="">
+            <h2>Ensaio sobre a Cegueira</h2>
+            <p> Uma alegoria perturbadora sobre a perda de humanidade em tempos de crise.</p>
+            <span class="preco">R$  28,79</span>
+          </div>
+
+          <div class="card" onclick="abrirDetalhes('Hamlet', slider14, 'O príncipe Hamlet busca vingança pela morte de seu pai, mergulhando em dilemas existenciais e tragédias.')">
+            <img class="capa" src="/img/Capa_Hamlet.jpg" alt="">
+            <h2>Hamlet </h2>
+            <p>Uma tragédia profunda sobre dúvida, vingança e a condição humana. </p>
+            <span class="preco">R$ 10,90</span>
+          </div>
+
+          <!-- ___________________________Quarta linha_______________________________  -->
+          <div class="card" onclick="abrirDetalhes('Romeu e Julieta', slider15, 'Dois jovens de famílias rivais se apaixonam, enfrentando tragédias em nome do amor.')">
+            <img class="capa" src="/img/Capa_RomeuJulieta.jpg" alt="">
+            <h2>Romeu e Julieta</h2>
+            <p>Um clássico eterno sobre o amor proibido e suas consequências.</p>
+            <span class="preco">R$ 30,65 </span>
+          </div>
+
+          <div class="card" onclick="abrirDetalhes('A Biblioteca da Meia-Noite', slider16,'Nora Seed está entre a vida e a morte quando encontra a misteriosa Biblioteca da Meia-Noite, onde cada livro representa uma versão diferente da sua vida. Ao explorar essas possibilidades, ela precisa decidir o que realmente faz a vida valer a pena.')">
+            <img class="capa" src="/img/Capa_Biblioteca.jpg" alt="">
+            <h2>A Biblioteca da Meia-Noite</h2>
+            <p>Uma reflexão emocionante sobre arrependimentos, escolhas e o poder de recomeçar..</p>
+            <span class="preco">R$ 45,30</span>
+          </div>
         </div>
        </main>
 
