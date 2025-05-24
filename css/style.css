@@ -423,6 +423,7 @@ footer{
     width: 30px;
     height: 30px;
     transition: transform 0.3s;
+    
 }
 
 .social-icons a img:hover {
@@ -443,5 +444,4 @@ html ::-webkit-scrollbar {
   html ::-webkit-scrollbar-track {
     background: #d4a373;
 }
-
 
