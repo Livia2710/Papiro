@@ -25,9 +25,6 @@
 
      <main>
         <h1>Contato</h1>
-         <div class="aviao-container">
-          <img src="./img/logo.png" alt="Avião de Papel" class="aviao">
-        </div> 
         <form id="contatoForm">
             <label for="nome">Nome e Sobrenome:</label>
             <input type="text" id="nome" name="nome" required>
@@ -88,36 +85,33 @@
     </footer>
 
     <script>
-        document.getElementById("contatoForm").addEventListener("submit", 
-        function(event){
-            event.preventDefault();
+      document.getElementById("contatoForm").addEventListener("submit", function(event){
+    event.preventDefault();
 
-            const nome = 
-            document.getElementById("nome").value.trim();
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+    const contatoPreferido = document.querySelector('input[name="contato"]:checked');
+    const tipoMensagem = document.querySelector('select[name="tipo"]').value;
 
-            const email = 
-            document.getElementById("email").value.trim();
+    const erro = document.getElementById("erro");
 
-            const telefone = 
-            document.getElementById("telefone").value.trim();
+    if (nome === '' || email === '' || telefone === '' || mensagem === '') {
+        erro.textContent = "Por favor preencha todos os campos.";
+    } else if (!email.includes('@')) {
+        erro.textContent = "Por favor insira um e-mail válido.";
+    } else if (!contatoPreferido) {
+        erro.textContent = alert("Por favor selecione uma forma de contato.");
+    } else if (tipoMensagem === '') {
+        erro.textContent =  alert("Por favor selecione o tipo de mensagem.");
+    } else {
+        erro.textContent = '';
+        alert("Formulário enviado com sucesso! 👍");
+        this.reset();
+    }
+});
 
-            const mensagem = 
-            document.getElementById("mensagem").value.trim();
-
-            const erro = 
-            document.getElementById("erro");
-
-            if(nome === ''|| email === '' || telefone === '' || mensagem === '') {
-                erro.textContent = "Por favor preencha todos os campos"
-            } else if (!email.includes('@')){
-                erro.textContent = "Por favor insira uma e-mail válido";
-            } else {
-                erro.textContent = '';
-                alert("Formulário enviado com sucesso!👍")
-                this.reset();
-            }
-        }
-    )
     </script>
     
 </body>
