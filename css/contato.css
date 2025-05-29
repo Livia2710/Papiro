@@ -273,14 +273,25 @@ footer{
 .social-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-.social-icons a img {
+.fab {
+    font-size: 35px;
+   
+    background-color: #8b4513;
+    color: #d4a373;
+    border-radius: 100%;
+    padding: 10PX;
+    
+}
 
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+.fab:hover{
+    background-color: #d4a373;
+    color: #8b4513;
+    transition: 0.3s all;
+
 }
 
 .social-icons a img:hover {

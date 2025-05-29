@@ -178,18 +178,51 @@ h1 {
     border-radius: 8px;
 }
 
-/* Footer Styling */
-.footer {
+/* ____________________________________________________________ */
+/* Footer */
+
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #8b4513;
     color: #f5f5dc;
     height: 200px;
 }
 
-footer {
+footer{
     background-color: #8b4513;
+    text-align: center;
+}
+
+/* Ícones sociais abaixo da logo */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.fab {
+    font-size: 35px;
+   
+    background-color: #8b4513;
+    color: #d4a373;
+    border-radius: 100%;
+    padding: 10PX;
+    
+}
+
+.fab:hover{
+    background-color: #d4a373;
+    color: #8b4513;
+    transition: 0.3s all;
+
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
 }
 
 /* Scrollbar Styling */

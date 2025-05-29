@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Contato</title>
 </head>
 <body>
@@ -27,16 +28,16 @@
         <h1>Contato</h1>
         <form id="contatoForm">
             <label for="nome">Nome e Sobrenome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome e sobrenome" required>
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX - XXXX " required>
 
             <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="10" cols="70" required></textarea>
+            <textarea id="mensagem" name="mensagem" rows="10" cols="70" placeholder="Digite sua mensagem"required></textarea>
 
             <label>Como prefere o nosso contato?</label>
             <div class="radio-group">
@@ -63,12 +64,14 @@
 
             <input class="botao" type="submit" value="Enviar">
         </form>
+
+        <div class="mensagem-sucesso" id="menSucesso"></div>
      </main>
 
      
       <!-- _________________________________________________________ -->
       <!-- Footer -->
-       <footer>
+      <footer>
         <div class="footer">
             <div class="circulo">
                 <img class="logotipo" src="./img/logo.png" alt="Logo" width="200px">
@@ -76,10 +79,13 @@
         </div>
             <div class="social-icons">
             <a href="https://wa.me/SEUNUMERO" target="_blank">
-                <i class="fab fa-whatsapp" style="font-size: 12px; color: white;">(11)16574-9595</i>
+                <i  class="fab fa-whatsapp" ></i>
             </a>
             <a href="https://www.instagram.com/SEUPERFIL" target="_blank">
-                <i class="fab fa-instagram" style="font-size: 12px; color: white;">@papiro</i>
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.instagram.com/SEUPERFIL" target="_blank">
+                <i class="fab fa-facebook"></i>
             </a>
         </div>
     </footer>
