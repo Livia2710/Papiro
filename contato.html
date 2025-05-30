@@ -49,10 +49,10 @@
             <label>Tipo de mensagem:</label>
             <select name="tipo">
                 <option value="">Selecione</option>
-                <option value="duvida">Dúvida</option>
-                <option value="sugestao">Sugestão</option>
-                <option value="elogio">Elogio</option>
-                <option value="reclamacao">Reclamação</option>
+                <option value="Dúvida">Dúvida</option>
+                <option value="Sugestão">Sugestão</option>
+                <option value="Elogio">Elogio</option>
+                <option value="Reclamação">Reclamação</option>
             </select>
 
             <div class="checkbox-group">
@@ -91,7 +91,8 @@
     </footer>
 
     <script>
-      document.getElementById("contatoForm").addEventListener("submit", function(event){
+ 
+  document.getElementById("contatoForm").addEventListener("submit", function(event){
     event.preventDefault();
 
     const nome = document.getElementById("nome").value.trim();
@@ -100,6 +101,7 @@
     const mensagem = document.getElementById("mensagem").value.trim();
     const contatoPreferido = document.querySelector('input[name="contato"]:checked');
     const tipoMensagem = document.querySelector('select[name="tipo"]').value;
+    const menSucesso = document.getElementById("menSucesso");
 
     const erro = document.getElementById("erro");
 
@@ -108,15 +110,27 @@
     } else if (!email.includes('@')) {
         erro.textContent = "Por favor insira um e-mail válido.";
     } else if (!contatoPreferido) {
-        erro.textContent = alert("Por favor selecione uma forma de contato.");
+        erro.textContent = "Por favor selecione uma forma de contato.";
     } else if (tipoMensagem === '') {
-        erro.textContent =  alert("Por favor selecione o tipo de mensagem.");
+        erro.textContent = "Por favor selecione o tipo de mensagem.";
     } else {
         erro.textContent = '';
-        alert("Formulário enviado com sucesso! 👍");
+
+        // Montando a mensagem final
+        const mensagemFinal = `
+            <p>Obrigado, <strong>${nome}!</strong> pelo formulário de ${tipoMensagem}</p>
+            <p>Nos entraremos em contato atráves de seu telefone: ${telefone} e ${contatoPreferido.value}</p>
+        `;
+
+        menSucesso.innerHTML = mensagemFinal;
+        menSucesso.style.display = "block";
+
+        // Resetando o formulário
         this.reset();
     }
-});
+  });
+
+
 
     </script>
     

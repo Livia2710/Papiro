@@ -251,6 +251,26 @@ form:hover .botao{
     transition: 0.3s;
 }
 
+.mensagem-sucesso {
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    width: 38%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #00897b;
+    display: none;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
 /* ____________________________________________________________ */
 /* Footer */
 
