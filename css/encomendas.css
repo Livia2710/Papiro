@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora";
+    background-color: #f5f5dc;
+}
+
+/* Estilização do Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    background-color: #8b4513;
+    color: #f5f5dc;
+    height: 120px;
+    text-decoration: none;
+}
+
+/* Estilização para os container */
+.container_sobre, .container_beneficios, .container_video {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.texto_header{
+    margin-left: 15px;
+    font-family: "Merriweather";
+    font-weight: 400;
+}
+
+/* Animação de quando passar o mouse em cima */
+.texto_header:hover{
+    color: #d4a373;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.logotipo{
+    margin-top: -50px;
+    margin-left: -33px;
+}
+
+.circulo {
+    background-color: #d4a373;
+    height: 100px;
+    width: 125px;
+    border-radius: 100%;
+    margin-left: 50px;
+    opacity: 0;  /* Começa invisível */
+    transform: scale(0.5);  /* Começa reduzido */
+    animation: circuloAnimacao 1s forwards;  /* Animação de entrada */
+}
+
+@keyframes circuloAnimacao {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);  /* Retorna ao tamanho original */
+    }
+}
+
+/* Estilização da lista com os links */
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    margin-right: 50px;
+    text-decoration: none;
+    
+}
+/* os Item(links) */
+li, a{
+    font-family: "Lora";
+    color: #f5f5dc;
+    text-decoration: none; /*Tira a linha do link*/
+    font-size: 19px;
+    list-style: none; /* Para titar os pontinho*/
+}
+
+/* "Animação" para mudar a cor enquanto passa o mouse */
+a:hover {
+    color: #d4a373;
+    transition: 1s;
+    cursor: pointer;
+}
+
+/* ____________________________________________________________ */
+/* Tabela */
+table{
+    width: 100%;
+    margin-bottom: 2%;
+    table-layout: fixed;
+}
+
+td, th{
+padding: 10px;
+margin: 0;
+border: 1px solid #8b4513;
+text-align: center;
+}
+
+th{
+    font-weight: bold;
+    background-color: #d4a373;
+}
+/* ____________________________________________________________ */
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8b4513;
+    color: #f5f5dc;
+    height: 200px;
+}
+
+footer{
+    background-color: #8b4513;
+    text-align: center;
+}
+
+/* Ícones sociais abaixo da logo */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.fab {
+    font-size: 35px;
+   
+    background-color: #8b4513;
+    color: #d4a373;
+    border-radius: 100%;
+    padding: 10PX;
+    
+}
+
+.fab:hover{
+    background-color: #d4a373;
+    color: #8b4513;
+    transition: 0.3s all;
+
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* ____________________________________________________________ */
+/* Estilização do Scroll */
+html ::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  html ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #8b4513;
+}
+  
+  html ::-webkit-scrollbar-track {
+    background: #d4a373;
+}
+

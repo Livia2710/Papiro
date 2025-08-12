@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/encomendas.css">
+    <link rel="shortcut icon" href="img/logo_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Encomendas</title>
+</head>
+<body>
+    <!-- Conteudo -->
+    <header>
+        <div class="container_logo">
+          <div class="circulo">
+              <a href="index.html"><img class="logotipo" src="./img/logo.png" alt="Logo" width="200px" ></a>
+            </div>
+          <h1 class="texto_header">Papiro</h1>
+        </div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="encomendas.html">Encomendas</a></li>
+         </ul>
+       </header>
+       <main>
+        <h1 class="encomendas-titulo">Encomendas</h1>
+       </main>
+       <!-- Tabela -->
+        <section class="container">
+            <table>
+                <!-- Cabeçalho da tabela -->
+                <thead>
+                    <!-- Linha de titulo -->
+                    <tr>
+                        <!-- é usado por causa do titulo -->
+                        <th>Nome</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Valor Únitário</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <!-- Corpo da Tabela -->
+                <tbody id="tabela-clientes">
+                    <tr class="cliente">
+                        <td class="nome">Carolina</td>
+                        <td class="produto">Dom Casmurro</td>
+                        <td class="qtde">2</td>
+                        <td class="unitario">12</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Sabrina</td>
+                        <td class="produto">Frankenstein</td>
+                        <td class="qtde">3</td>
+                        <td class="unitario">72</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Matheus</td>
+                        <td class="produto">A Revolução dos Bichos</td>
+                        <td class="qtde">5</td>
+                        <td class="unitario">13</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Lucas Vinicius</td>
+                        <td  class="produto">Inferno de Dante</td>
+                        <td  class="qtde">2</td>
+                        <td class="unitario">21</td>
+                        <td class="total"></td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Lívia</td>
+                        <td class="produto">A Biblioteca da Meia-Noite</td>
+                        <td  class="qtde">1</td>
+                        <td class="unitario">45</td>
+                        <td class="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+         <!-- _________________________________________________________ -->
+      <!-- Footer -->
+      <footer>
+        <div class="footer">
+            <div class="circulo">
+                <img class="logotipo" src="./img/logo.png" alt="Logo" width="200px">
+            </div>
+        </div>
+            <div class="social-icons">
+            <a href="https://wa.me/SEUNUMERO" target="_blank">
+                <i  class="fab fa-whatsapp" ></i>
+            </a>
+            <a href="https://www.instagram.com/SEUPERFIL" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/SEUPERFIL" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="Js/encomenda.js"></script>
+</body>
+</html>
