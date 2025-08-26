@@ -15,14 +15,13 @@ for (var count = 0; count < clientes.length; count++) {
     // Verifica se a quantidade é válida
     if (isNaN(tab_qtde) || tab_qtde < 1) {
         clientes[count].querySelector(".qtde").textContent = "Quantidade inválida";
-        clientes[count].style.background = "red";
-        clientes[count].style.color = "white";
+        clientes[count].classList.add("info-invalida");
     } 
     // Verifica se o valor unitário é válido
     else if (isNaN(tab_unitario) || tab_unitario <= 0) {
         clientes[count].querySelector(".unitario").textContent = "R$ Unitário inválido!";
-        clientes[count].style.background = "red";
-        clientes[count].style.color = "white";
+        clientes[count].classList.add("texto-erro");
+    
     } 
     // Se ambos forem válidos, calcula o total
     else {
