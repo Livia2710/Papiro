@@ -29,6 +29,9 @@
        </main>
        <!-- Tabela -->
         <section class="container">
+            <!-- Campo de filltragem da tabela -->
+             <label for="filtrar-tabela">Buscar:</label>
+             <input type="text" id="filtrar-tabela" class="filtrar-tabela" placeholder="Digite o cliente que deseja buscar">
             <table>
                 <!-- Cabeçalho da tabela -->
                 <thead>
@@ -84,7 +87,7 @@
 
         </section>
         <!-- ________Forms________ -->
-        <div class="forms">
+        <div class="forms" >
             <h1>Contato</h1>
             <form id="contatoForm">
                 <div class="form-group">
@@ -117,7 +120,7 @@
                 </div>
         
                 
-                <div class="form-group full-width">
+                <div class="form-group full-width" id="adicionar-encomenda">
                     <input id="adicionar" class="botao" type="submit" value="Adicionar">
                 </div>
             </form>
@@ -146,5 +149,7 @@
 
     <script src="Js/encomenda.js"></script>
     <script src="Js/adicionar_encomenda.js"></script>
+    <script src="Js/remover_encomenda.js"></script>
+    <script src="Js/buscar_encomenda.js"></script>
 </body>
 </html>

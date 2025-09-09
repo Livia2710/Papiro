@@ -114,6 +114,19 @@ a:hover {
 }
 
 /* ____________________________________________________________ */
+/* Campo de Filtragm */
+#filtrar-tabela{
+    width: 300px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+/* Esconde a linha para a busca */
+.invisivel{
+    display: none;
+}
+
+/* ____________________________________________________________ */
 /* Tabela */
 table{
     width: 100%;
@@ -186,10 +199,7 @@ select {
     color: #00897b;
     font-size: 18px;
     font-family: "Merriweather", serif;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 70px;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 10px;
     cursor: pointer;
     width: 100%;
 }
@@ -197,10 +207,6 @@ select {
 .botao:hover {
     background-color: #00897b;
     color: #f5f5dc;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 70px;
     transition: 0.3s;
 }
 
@@ -214,6 +220,12 @@ select {
 
 .texto-erro{
     color: red;
+}
+/* ____________________________________________________________ */
+/* Efeito para quando excluir uma linha da tabela */
+.fadeOut{
+    opacity: 0;
+    transition: 0.5s;
 }
 /* ____________________________________________________________ */
 /* Footer */
