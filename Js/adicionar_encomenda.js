@@ -7,15 +7,24 @@ form.addEventListener("submit", function(event) {
     // Captura os dados do formulário
     var novaEncomenda = obtemEncomenda(form);
 
+    //Adiciona a encomenda
+    adicionarEncomendaTabela(novaEncomenda);
+
     // Seleciona a tabela onde vamos adicionar a nova linha
-    var tabela = document.querySelector("#tabela-clientes");
+    // var tabela = document.querySelector("#tabela-clientes");
 
     // Adiciona a nova linha na tabela
-    tabela.appendChild(montaTR(novaEncomenda));
+    // tabela.appendChild(montaTR(novaEncomenda));
 
     // Limpa o formulário para a próxima entrada
     form.reset();
 });
+
+//Função para adicionar nova encomenda na tabela
+function adicionarEncomendaTabela(dadosEnncomenda){
+    var tabela = document.querySelector("#tabela-clientes");
+    tabela.appendChild(montaTR(dadosEnncomenda));
+}
 
 // Função para obter os dados do formulário
 function obtemEncomenda(formulario){
